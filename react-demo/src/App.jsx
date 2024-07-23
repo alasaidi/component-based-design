@@ -4,20 +4,17 @@
 import React from 'react';
 import './App.css'
 import ThreeFlippingCubes from './components/flipper-cube/ThreeFlippingCubes.jsx'
+import ElementList from './components/element-list/elementlist.jsx';
+
+
 const App = () => {
   return (
     <div>
+              <h2 className='header'>welcome to react page</h2>
+
       <ThreeFlippingCubes />
-      <React.Fragment>
-      <div>
-        <h2 className='header'>welcome to react page</h2>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-        </ul>
-      </div>
-    </React.Fragment>
+      <ElementList />
+      
     </div>
   );
 };
