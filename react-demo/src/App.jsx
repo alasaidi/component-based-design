@@ -15,7 +15,7 @@ const App = () => {
               <h2 className='header'>welcome to react page</h2>
 
       <ThreeFlippingCubes />
-      <ElementList />
+      <ElementList header='this is the fave list ' itemToList={LIST_ITEMS} stylename="favoriteList"/>
       <div className='listcontainer'>
      <FavoriteList header='this is the fave list ' itemToList={LIST_ITEMS}  />
      <BadList header='this is the bad list '/>
