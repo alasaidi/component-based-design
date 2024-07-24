@@ -1,0 +1,7 @@
+.favoriteList {
+  padding-right: 10px;
+}
+.favoriteList ul {
+  list-style: none;
+  color: green;
+}
