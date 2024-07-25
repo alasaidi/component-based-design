@@ -1,3 +1,17 @@
 .elementList ul {
   list-style: none;
 }
+
+.badList ul {
+  list-style: none;
+  color: red;
+}
+
+.favoriteList {
+  padding-right: 10px;
+  background-color: blue;
+}
+.favoriteList ul {
+  list-style: none;
+  color: green;
+}

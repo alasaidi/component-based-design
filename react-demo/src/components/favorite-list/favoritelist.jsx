@@ -1,5 +1,5 @@
 import "./favorite-list.css"
-import LIST_ITEMS from "../data/list-items/listItems";
+// import LIST_ITEMS from "../data/list-items/listItems";
 
  const FavoriteList = ({header="default",itemToList={}}) => {
     return (
