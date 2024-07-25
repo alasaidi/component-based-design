@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "json": "^11.0.0",
     "lucide-react": "^0.414.0",
     "styled-components": "^6.1.12"
   }
