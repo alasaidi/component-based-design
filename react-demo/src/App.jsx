@@ -8,6 +8,7 @@ import ElementList from "./components/element-list/elementlist.jsx";
 import LIST_ITEMS from "./components/data/list-items/listItems.js";
 import Pokemon from "./components/Pokemon/Pokemon.jsx";
 import pokemon_data from "./components/data/pokemon_data/pokemon-data.js";
+import Carousels from "./components/carousels/Carousels.jsx";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Pokemon pokemon_data={pokemon_data} stylename="custom-style-1" />
         <Pokemon pokemon_data={pokemon_data} stylename="custom-style-2" />
       </div>
+      <Carousels />
     </div>
   );
 };
