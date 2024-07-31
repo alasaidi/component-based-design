@@ -31,6 +31,10 @@ You can find in this folder the most minimal example for a React App to start it
 
 Based on the exercise from first week:
 
-- Display pokemon list based on data from a state
-- Add a pokemon in the list with an input
-- Remove a pokemon from a list
+- [ ] Display all pokemons name in the Menu (List) and all the cards (PokemonCard)
+- [ ] Display just the PokemonCard that isActive (Conditional Rendering)
+- [ ] Change the class of the menu for Active Items (useState / conditinal rendering)
+- [ ] Toogle classes, letting just one class active.
+- [ ] Refactor the PokemonForm, to recreate an array with the names of the Pokemons based on the given object (useState, useEffect)
+- [ ] Centralise the data handeling of the object (useContext)
+- [ ] Extra: useMemo and useRef

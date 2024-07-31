@@ -1,10 +1,11 @@
-import { PokemonForm } from './PokemonForm';
+import { Home } from './Views/Home'
 
-export const App = () => (
-  <div className='App'>
-    <header>
-      <img src='/assets/header.png' alt='Header pokemon' />
-    </header>
-    <PokemonForm />
-  </div>
-);
+import PokemonProvider from './contexts/PokemonContext'
+
+export const App = () => {
+  return (
+    <PokemonProvider>
+      <Home />
+    </PokemonProvider>
+  )
+}
