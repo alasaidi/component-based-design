@@ -1,0 +1,9 @@
+li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.listActive {
+  background-color: aqua;
+  border-radius: 10px;
+}
