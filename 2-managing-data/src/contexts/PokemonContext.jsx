@@ -1,34 +1,41 @@
-import { useState, useEffect, createContext, useContext } from 'react'
-import { pokemonList } from '../api/helper'
+import { useState, useEffect, createContext, useContext } from "react";
+import { pokemonList } from "../api/helper";
 
-const PokemonContext = createContext({})
+const PokemonContext = createContext({});
 
 export default function PokemonProvider({ children }) {
-  const [pokemons, setPokemons] = useState(pokemonList)
-  const [, setActive] = useState(false)
+  const [pokemons, setPokemons] = useState([]);
+  const [, setActive] = useState(false);
 
   useEffect(() => {
-    setPokemons(pokemonList)
-
-    return () => setPokemons({})
-  }, [pokemons])
+    setPokemons(pokemonList);
+    //WHY DO WE NEED TO cleanup function sets pokemons to an empty object
+    // return () => setPokemons({});
+  }, [pokemonList]);
 
   const handleActive = (index) => {
-    let i
-    for (i = 0; i < pokemons.length; i++) {
+    // let i;
+    // for (i = 0; i < pokemons.length; i++) {
+    //   if (i === index) {
+    //     pokemons[i].isActive = true;
+    //   } else {
+    //     pokemons[i].isActive = false;
+    //   }
+    //   setActive([...pokemons]);
+    // }
+    const updatedPokemons = pokemons.map((pokemon, i) => {
       if (i === index) {
-        pokemons[i].isActive = true
+        return { ...pokemon, isActive: true };
       } else {
-        pokemons[i].isActive = false
+        return { ...pokemon, isActive: false };
       }
-      setActive([...pokemons])
-    }
-  }
+    });
 
-  const value = { pokemons, setActive, handleActive }
-  return (
-    <PokemonContext.Provider value={value}>{children}</PokemonContext.Provider>
-  )
+    setPokemons(updatedPokemons);
+  };
+
+  const value = { pokemons, setActive, handleActive };
+  return <PokemonContext.Provider value={value}>{children}</PokemonContext.Provider>;
 }
 
-export const usePokemon = () => useContext(PokemonContext)
+export const usePokemon = () => useContext(PokemonContext);
