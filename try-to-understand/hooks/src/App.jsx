@@ -1,8 +1,7 @@
-import { useState } from "react";
-
 import "./App.css";
 import UseState from "./assets/components/UseState/Usestate.jsx";
 import UseEffect from "./assets/components/UseEffect/Useeffect.jsx";
+import UseContext from "./assets/components/useContext/Usecontext.jsx";
 
 function App() {
   return (
@@ -12,6 +11,9 @@ function App() {
       </div>
       <div className="useEffect">
         <UseEffect />
+      </div>
+      <div className="useContext">
+        <UseContext />
       </div>
     </>
   );
