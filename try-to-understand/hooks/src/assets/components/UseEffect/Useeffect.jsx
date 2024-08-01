@@ -16,7 +16,7 @@ function UseEffect() {
     fetchData();
   }),
     [];
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <h1>json data </h1>

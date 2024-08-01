@@ -24,3 +24,11 @@
   background-color: #8b8989;
   border-radius: 10px;
 }
+
+.useContext {
+  border: 10px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #e60e0e;
+  border-radius: 10px;
+}
